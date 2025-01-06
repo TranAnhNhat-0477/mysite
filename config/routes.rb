@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   end
 
   root "products#index"
+
+
+  get 'signup', to: 'users#new' 
+  post 'signup', to: 'users#create'
 end
