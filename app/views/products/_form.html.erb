@@ -1,31 +1,59 @@
-<%= form_with model: product do |form| %>
-    <div>
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
 
-    <div>
-      <%= form.label :description, style: "display: block" %>
-      <%= form.rich_text_area :description %>
-    </div>
 
-    <div>
-      <%= form.label :featured_image, style: "display: block" %>
-      <%= form.file_field :featured_image, accept: "image/*" %>
-    </div>
 
-    <div>
-      <%= form.label :price %>
-      <%= form.number_field :price, step: 0.01, value: @product.price.to_f / 100.0 %>
-    </div>
 
-    <div>
-      <%= form.label :inventory_count, style: "display: block" %>
-      <%= form.number_field :inventory_count %>
+
+<hr />
+<%= form_with model: product, id:"addproduct-form" do |form| %>
+  <div class="row" id="cus-addproduct-row">
+        <div class="col-sm-3">
+            <%= form.label :name, "Enter product name", class:"form-label" %>
+        </div>
+        <div class="col-5">
+            <%= form.text_field :name, class:"form-control" %>
+        </div>
     </div>
-  
-    <div>
-      <%= form.submit %>
+    <div class="row" id="cus-addproduct-row">
+        <div class="col-sm-3">
+            <label class="form-label">Enter product description</label>
+            <%= form.label :description, "Enter product description", class:"form-label"%>
+        </div>
+        <div class="col-5">
+            <%= form.rich_text_area :description %>
+        </div>
     </div>
-  <% end %>
+    <div class="row" id="cus-addproduct-row">
+        <div class="col-sm-3">
+            <%= form.label :price, "Enter price", class:"form-label" %>
+        </div>
+        <div class="col-5">
+            <%= form.number_field :price, class:"form-control", step: 0.01, value: @product.price.to_f / 100.0 %>
+        </div>
+    </div>
+    <div class="row" id="cus-addproduct-row">
+        <div class="col-sm-3">
+            <%= form.label :inventory_count, "Enter inventory", class:"form-label" %>
+        </div>
+        <div class="col-5">
+            <%= form.number_field :inventory_count, class:"form-control" %>
+        </div>
+    </div>
+    <div class="row" id="cus-addproduct-row">
+        <div class="col-sm-3">
+            <%= form.label :featured_image, "Insert product photo", class:"form-label" %>
+        </div>
+        <div class="col-5">
+            <%= form.file_field :featured_image, class:"form-control", accept: "image/*" %>
+        </div>
+    </div>
+    <div class="row" id="cus-addproduct-row">
+        <div class="col-sm-3">
+            <label class="form-label"></label>
+        </div>
+        <div class="col-sm-3">
+            <%= form.submit class:"btn btn-border-black", id:"add-product" %>
+        </div>
+    </div>
+<% end %>
+
   
