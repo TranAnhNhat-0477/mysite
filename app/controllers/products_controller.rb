@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.price = (@product.price.to_f * 100).round
     if @product.save
       redirect_to @product
     else
@@ -26,6 +27,7 @@ class ProductsController < ApplicationController
   end
 
   def update
+    @product.price = (params[:product][:price].to_f * 100).round if params[:product][:price].present?
     if @product.update(product_params)
       redirect_to @product
     else
@@ -44,6 +46,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.expect(product: [ :name, :description, :featured_image, :inventory_count ])
+      params.expect(product: [ :name, :description, :short_description, :price, :featured_image, :inventory_count ])
     end
 end
