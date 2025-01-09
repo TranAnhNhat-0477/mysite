@@ -5,9 +5,12 @@ Rails.application.routes.draw do
     resources :subscribers, only: [ :create ]
   end
 
-  root "products#index"
+  root "products#public_index"
 
 
   get 'signup', to: 'users#new' 
   post 'signup', to: 'users#create'
+
+
+  get '/admin', to: 'products#index', as: 'admin_products'
 end

@@ -335,12 +335,15 @@ body {
     text-align:center;
 }
 #cus-table{
-    width:97%;
+    width:fit-content;
     margin:15px 40px 20px;
 }
 #cus-admin-edit{
     margin-right:12px;
-    border:none;
+    border-radius: 0;
+}
+#cus-admin-delete{
+    border-radius: 0;
 }
 #cus-admin-back{
     text-decoration:none;
@@ -455,6 +458,7 @@ body {
 #cus-a-login{
     font-size:23px;
     color:#fff;
+    margin-left: 20px;
 }
 #cus-a-login:hover{
     background-color:transparent;

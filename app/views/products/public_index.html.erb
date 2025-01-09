@@ -1,0 +1,26 @@
+
+
+
+
+
+<div class="container-fluid pt-5 pb-3">
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 text-center"><span class="bg-title-custom pr-3">New Arrivals</span></h2>
+    <div class="row px-xl-5">
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+            <% @products.each do |product| %>
+                <div class="col">
+                    <%= link_to product, id:"product-wrapper-link" do %>
+                    <div class="card product-card">
+                        <%= image_tag product.featured_image, class:"card-img-top" if product.featured_image.attached? %>
+                        <div class="card-body">
+                            <p class="card-text" id="cus-product-name"><%= product.name %></p>
+                            <p class="card-text" id="cus-product-price"><%= number_to_currency(product.price.to_f / 100.0, unit: "£", precision: 2) %></p>
+                            <p><a href="#" class="btn btn-danger" id="btn-addtocart">Add to cart</a></p>
+                        </div>
+                    </div>
+                    <% end %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

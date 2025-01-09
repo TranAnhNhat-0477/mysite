@@ -1,8 +1,13 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
-  allow_unauthenticated_access only: %i[ index show ]
+  allow_unauthenticated_access only: %i[ public_index show ]
 
   def index
+    @products = Product.all
+  end
+
+
+  def public_index
     @products = Product.all
   end
 
