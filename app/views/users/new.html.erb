@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row justify-content-center mt-5">
         <div id="form-container-cus">
-            <h1 id="cus-login-h1">SIGN UP</h1>
+            <h1 id="cus-signup-h1">SIGN UP</h1>
             <%= form_with(model: @user, url: signup_path, local: true) do |form| %>
             <% if @user.errors.any? %>
             <div class="alert alert-danger">

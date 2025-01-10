@@ -323,11 +323,12 @@ body {
 .btn-product-detail {
     border: none;
     padding: 12px 42px;
-    background-color: #4CC9FE;
+    background-color: #6439FF;
     margin: 10px 0 0 55px;
+    color:#ffffff;
 }
 .btn-product-detail:hover{
-    background:#6439FF;
+    background:#10439F;
     color:#ffffff;
     border:1px solid #ffffff;
 }
@@ -382,6 +383,14 @@ body {
     margin-left: 240px;
     margin-top: 20px;
 }
+#cus-signup-h1 {
+    font-family: "Kanit", serif;
+    font-weight: 600;
+      font-size: 38px;
+      color: #0D0C0C;
+      margin-left: 220px;
+      margin-top: 20px;
+  }
 #cus-forgotpassword-h1 {
   font-family: "Kanit", serif;
   font-weight: 600;
