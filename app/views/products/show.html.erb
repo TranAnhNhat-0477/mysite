@@ -30,22 +30,6 @@
                     <h3 class="font-weight-semi-bold mb-4"><%= number_to_currency(@product.price.to_f / 100.0, unit: "£", precision: 2) %></h3>
                     <p class="mb-4"><%= @product.short_description %></p>
                     <%= render "inventory", product: @product %>
-                    <div class="flex-column align-items-center mb-4 pt-2">
-                        <div class="input-group quantity mr-3" style="width: 150px;">
-                            <div class="input-group-btn">
-                                <button class="btn btn-primary btn-minus">
-                                    <i class='bx bx-minus'></i>
-                                </button>
-                            </div>
-                            <input type="text" class="form-control bg-custom-input-text border-0 text-center" value="1">
-                            <div class="input-group-btn">
-                                <button class="btn btn-primary btn-plus">
-                                    <i class='bx bx-plus'></i>
-                                </button>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-danger cus-btn-addtocart"><i class='bx bx-cart'></i> Add To Cart</a>
-                    </div>
                 </div>
             </div>
         </div>
