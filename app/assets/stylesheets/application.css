@@ -320,6 +320,17 @@ body {
     color:#ffffff;
     border:1px solid #ffffff;
 }
+.btn-product-detail {
+    border: none;
+    padding: 12px 42px;
+    background-color: #4CC9FE;
+    margin: 10px 0 0 55px;
+}
+.btn-product-detail:hover{
+    background:#6439FF;
+    color:#ffffff;
+    border:1px solid #ffffff;
+}
 #isNewArrivalCheckbox{
     height:18px;
     width:18px;
@@ -491,4 +502,8 @@ body {
     color:#ffffff;
     border:1px solid #ffffff;
     transform:scale(1.1);
+}
+
+#cus-logout{
+    background-color: #6439FF;
 }

@@ -101,19 +101,11 @@
                                 <li class="nav-item">
                                     <i class='bx bx-cart text-light position-relative'></i>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <% if session[:user_id].present? %>
-                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:18px;color:#fff;cursor:pointer;">
-                                            Hi, <%= session[:email_address] %>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><%= link_to "Log out", new_session_path, method: :delete, class:"dropdown-item" if authenticated? %></li>
-                                        </ul>
-                                        <% else %>
-                                        <%= link_to new_session_path, class:"dropdown-item", id:"cus-a-login" do %>
-                                            <i class='bx bx-user text-light'></i>
-                                        <% end %>
-                                    <% end %>                                 
+                                <li class="nav-item">
+                                    <%= button_to "Log out", session_path, method: :delete, class:"btn btn-secondary", style:"margin-left: 30px" if authenticated? %>                                
+                                </li>
+                                <li class="nav-item">
+                                    <%= link_to "Login", new_session_path, class:"btn btn-success", style:"margin-left: 30px" unless authenticated? %>                                
                                 </li>
                             </ul>
                         </div>

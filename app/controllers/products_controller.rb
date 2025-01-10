@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   allow_unauthenticated_access only: %i[ public_index show ]
 
   def index
-    @products = Product.all
+    @products = Product.all.page(params[:page]).per(5)
   end
 
 
