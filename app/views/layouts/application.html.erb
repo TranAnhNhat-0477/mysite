@@ -98,13 +98,10 @@
                         <div class="col-lg-2 col-2">
                             <ul class="navbar-nav flex-grow-1" style="font-size:23px;align-items:center;">
                                 <li class="nav-item">
-                                    <i class='bx bx-cart text-light position-relative'></i>
+                                    <%= button_to "Log out", session_path, method: :delete, class:"btn btn-secondary", style:"margin-left: 80px" if authenticated? %>                                
                                 </li>
                                 <li class="nav-item">
-                                    <%= button_to "Log out", session_path, method: :delete, class:"btn btn-secondary", style:"margin-left: 30px" if authenticated? %>                                
-                                </li>
-                                <li class="nav-item">
-                                    <%= link_to "Login", new_session_path, class:"btn btn-success", style:"margin-left: 30px" unless authenticated? %>                                
+                                    <%= link_to "Login", new_session_path, class:"btn btn-success", style:"margin-left: 80px" unless authenticated? %>                                
                                 </li>
                             </ul>
                         </div>

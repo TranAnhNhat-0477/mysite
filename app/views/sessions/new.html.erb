@@ -1,5 +1,5 @@
 
-<%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
+
 
 
 
@@ -9,6 +9,7 @@
         <div id="form-container-cus">
             <h1 id="cus-login-h1">LOGIN</h1>
             <%= tag.div(flash[:alert], style: "color:red; margin-left:65px") if flash[:alert] %>
+            <%= tag.div(flash[:notice], style: "color:green; margin-left:65px") if flash[:notice] %>
             <%= form_with url: session_path do |form| %>
             <form id="cus-login-form">
                 <div id="form-item">
